@@ -3,7 +3,7 @@
 
 ```bash
 
- gcc -shared -o  guile_c_lmdb.so  -fPIC guile_c_lmdb.c
+ gcc guile_c_lmdb.c  -o   guile_c_lmdb
 
 ```
 
