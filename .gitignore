@@ -1,0 +1,2 @@
+guile-lmdb/*.so
+guile-lmdb/*.o
