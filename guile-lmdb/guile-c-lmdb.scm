@@ -1,4 +1,4 @@
-(define-module (lmdb-guile-test-1 guile-c-lmdb)
+(define-module (lmdb-guile-test-1 guile_c_lmdb)
   #:use-module (ice-9 ftw)
   #:use-module (ice-9 rdelim)
   #:use-module (system foreign-library)
@@ -10,6 +10,7 @@
             %lmdb-read
             %lmdb-close            
     ))
+
 
 (define %lmdb-shared-lib  "./test")
 (define %lmdb-init
