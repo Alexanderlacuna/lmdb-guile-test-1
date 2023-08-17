@@ -1,4 +1,4 @@
-(define-module (lmdb-guile-test-1 guile_c_lmdb)
+(define-module (guile-lmdb guile-c-lmdb)
   #:use-module (ice-9 ftw)
   #:use-module (ice-9 rdelim)
   #:use-module (system foreign-library)
@@ -8,11 +8,14 @@
             %lmdb-end
             %lmdb-write
             %lmdb-read
-            %lmdb-close            
+            %lmdb-close
+            %lmdb-shared-lib            
     ))
 
+;;fixing issue with loading path from different modules
+(define %lmdb-shared-lib  "./guile-lmdb/test")
 
-(define %lmdb-shared-lib  "./test")
+
 (define %lmdb-init
   (foreign-library-function %lmdb-shared-lib "scm_mdb_init"
     #:return-type '* ; Pointer to struct _mdb
